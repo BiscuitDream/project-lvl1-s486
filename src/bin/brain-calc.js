@@ -13,6 +13,7 @@ console.log();
 
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
 
+// Словарем реализовать
 const getRandomOperator = () => {
   const operator = getRandomInt(1, 3);
   switch (operator) {
@@ -25,6 +26,7 @@ const getRandomOperator = () => {
   }
 };
 
+// Словарем реализовать
 const getResult = (a, b, operation) => {
   switch (operation) {
     case '+':
