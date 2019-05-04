@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
+const rounds = 3;
+
 console.log('Welcome to the Brain Games!');
 console.log('Answer "yes" if number even otherwise answer "no".');
 console.log();
@@ -12,7 +14,7 @@ console.log();
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
 
 const evenGame = (count) => {
-  if (count >= 3) {
+  if (count >= rounds) {
     return console.log(`Congratulations, ${name}!`);
   }
 
