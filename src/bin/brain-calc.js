@@ -44,29 +44,26 @@ const calcGame = (count) => {
   }
 
   const num1 = getRandomInt(0, 100);
-  console.log('num1 :', num1);
+  // console.log('num1 :', num1);
   const num2 = getRandomInt(0, 100);
-  console.log('num2 :', num2);
+  // console.log('num2 :', num2);
   const operator = getRandomOperator();
-  console.log('operator :', operator);
+  // console.log('operator :', operator);
   const expression = `${num1} ${operator} ${num2}`;
-  console.log('expression :', expression);
+  console.log('Question: :', expression);
   const result = getResult(num1, num2, operator);
-  console.log('result :', result);
-  console.log();
+  // console.log('result :', result);
+  // console.log();
 
-  // const isEven = secret % 2 === 0;
+  const answer = Number(readlineSync.question('Your answer: '));
+  // console.log(`answer : ${answer}. typeof ${typeof answer}`);
 
-  // console.log(`Question: ${secret}`);
-
-  // const answer = readlineSync.question('Your answer: ');
-  // if ((answer === 'yes' && isEven) || (answer === 'no' && !isEven)) {
-  //   console.log('Correct!');
-  // } else {
-  //   const correct = isEven ? 'yes' : 'no';
-  //   const message = `'${answer}' is wrong answer ;(. Correct answer was '${correct}'. \nLet's try again, ${name}`;
-  //   return console.log(message);
-  // }
+  if (answer === result) {
+    console.log('Correct!');
+  } else {
+    const message = `'${answer}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, Sam!`;
+    return console.log(message);
+  }
 
   return calcGame(count + 1);
 };
