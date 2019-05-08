@@ -44,19 +44,13 @@ const calcGame = (count) => {
   }
 
   const num1 = getRandomInt(0, 100);
-  // console.log('num1 :', num1);
   const num2 = getRandomInt(0, 100);
-  // console.log('num2 :', num2);
   const operator = getRandomOperator();
-  // console.log('operator :', operator);
-  const expression = `${num1} ${operator} ${num2}`;
-  console.log('Question: :', expression);
+  const question = `${num1} ${operator} ${num2}`;
+  console.log('Question: :', question);
   const result = getResult(num1, num2, operator);
-  // console.log('result :', result);
-  // console.log();
 
   const answer = Number(readlineSync.question('Your answer: '));
-  // console.log(`answer : ${answer}. typeof ${typeof answer}`);
 
   if (answer === result) {
     console.log('Correct!');
