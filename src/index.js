@@ -1,4 +1,6 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from 'hexlet-pairs';
+// import { cons, car, cdr, toString } from 'hexlet-pairs';
 
 // Спрашиваем у пользователя имя, далее приветствуем его
 const greeting = () => {
@@ -8,22 +10,13 @@ const greeting = () => {
 
 export default greeting;
 
+// const getName = () => {
+//   const name = readlineSync.question('May I have your name? ');
+//   console.log(`Hello, ${name}!`);
+//   console.log();
 
-
-
-
-
-import { cons, car, cdr, toString } from 'hexlet-pairs';
-
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
-
-const getName = () => {
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  console.log();
-
-  return name;
-};
+//   return name;
+// };
 
 const core = (rules, askQuestion, getAnswer) => {
   const rounds = 3;
