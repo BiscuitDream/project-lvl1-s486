@@ -1,71 +1,71 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
 
-const rounds = 3;
+import { core } from '..';
+import { calcRules, calcQuestion, calcAnswer } from '../games/game-calc';
 
-console.log('Welcome to the Brain Games!');
-console.log('What is the result of the expression?');
-console.log();
+core(calcRules, calcQuestion, calcAnswer);
 
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
-console.log();
+// import readlineSync from 'readline-sync';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
+// const rounds = 3;
 
-// Словарем реализовать
-const getRandomOperator = () => {
-  const operator = getRandomInt(1, 3);
-  switch (operator) {
-    case 1:
-      return '+';
-    case 2:
-      return '-';
-    default:
-      return '*';
-  }
-};
+// console.log('Welcome to the Brain Games!');
+// console.log('What is the result of the expression?');
+// console.log();
 
-// Словарем реализовать
-const getResult = (a, b, operation) => {
-  switch (operation) {
-    case '+':
-      return a + b;
-    case '-':
-      return a - b;
-    default:
-      return a * b;
-  }
-};
+// const name = readlineSync.question('May I have your name? ');
+// console.log(`Hello, ${name}!`);
+// console.log();
 
-const calcGame = (count) => {
-  if (count >= rounds) {
-    return console.log(`Congratulations, ${name}!`);
-  }
+// const getRandomInt = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
 
-  const num1 = getRandomInt(0, 100);
-  // console.log('num1 :', num1);
-  const num2 = getRandomInt(0, 100);
-  // console.log('num2 :', num2);
-  const operator = getRandomOperator();
-  // console.log('operator :', operator);
-  const expression = `${num1} ${operator} ${num2}`;
-  console.log('Question: :', expression);
-  const result = getResult(num1, num2, operator);
-  // console.log('result :', result);
-  // console.log();
+// // Словарем реализовать
+// const getRandomOperator = () => {
+//   const operator = getRandomInt(1, 3);
+//   switch (operator) {
+//     case 1:
+//       return '+';
+//     case 2:
+//       return '-';
+//     default:
+//       return '*';
+//   }
+// };
 
-  const answer = Number(readlineSync.question('Your answer: '));
-  // console.log(`answer : ${answer}. typeof ${typeof answer}`);
+// // Словарем реализовать
+// const getResult = (a, b, operation) => {
+//   switch (operation) {
+//     case '+':
+//       return a + b;
+//     case '-':
+//       return a - b;
+//     default:
+//       return a * b;
+//   }
+// };
 
-  if (answer === result) {
-    console.log('Correct!');
-  } else {
-    const message = `'${answer}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, Sam!`;
-    return console.log(message);
-  }
+// const calcGame = (count) => {
+//   if (count >= rounds) {
+//     return console.log(`Congratulations, ${name}!`);
+//   }
 
-  return calcGame(count + 1);
-};
+//   const num1 = getRandomInt(0, 100);
+//   const num2 = getRandomInt(0, 100);
+//   const operator = getRandomOperator();
+//   const question = `${num1} ${operator} ${num2}`;
+//   console.log('Question: :', question);
+//   const result = getResult(num1, num2, operator);
 
-calcGame(0);
+//   const answer = Number(readlineSync.question('Your answer: '));
+
+//   if (answer === result) {
+//     console.log('Correct!');
+//   } else {
+//     const message = `'${answer}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, Sam!`;
+//     return console.log(message);
+//   }
+
+//   return calcGame(count + 1);
+// };
+
+// calcGame(0);
