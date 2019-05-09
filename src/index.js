@@ -11,6 +11,12 @@ export default greeting;
 
 
 
+
+
+import { cons, car, cdr, toString } from 'hexlet-pairs';
+
+const getRandomInt = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
+
 const getName = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -19,13 +25,8 @@ const getName = () => {
   return name;
 };
 
-const rounds = 3;
-
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
-
-
-
 const core = (rules, askQuestion, getAnswer) => {
+  const rounds = 3;
   // Приветствие
   console.log('Welcome to the Brain Games!');
 
@@ -34,7 +35,9 @@ const core = (rules, askQuestion, getAnswer) => {
   console.log();
 
   // Получение имени и приветствие по имени
-  const name = getName();
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  console.log();
 
   // Начинаем раунды
   const round = (count) => {
@@ -42,15 +45,22 @@ const core = (rules, askQuestion, getAnswer) => {
       return console.log(`Congratulations, ${name}!`);
     }
 
-    // Получаем фразу для вопроса и правильный ответ
-    const result = askQuestion();
-    // Получаем ответ
-    const answer = getAnswer();
+    // Получаем фразу для вопроса и правильный ответ (пара/hexlet-pairs)
+    const question = askQuestion(); // пара
+    const phrase = car(question); // фраза для вопроса
+    const corectAnswer = cdr(question); // верный ответ
 
-    if (answer === result) {
+    // Задаем вопрос
+    console.log(`Question: ${phrase}`);
+
+    // Получаем ответ обрабаотываем его
+    const answer = readlineSync.question('Your answer: ');
+    const processedAnswer = getAnswer(answer);
+
+    if (processedAnswer === corectAnswer) {
       console.log('Correct!');
     } else {
-      const message = `'${answer}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, Sam!`;
+      const message = `'${processedAnswer}' is wrong answer ;(. Correct answer was '${corectAnswer}'. \nLet's try again, Sam!`;
       return console.log(message);
     }
 
