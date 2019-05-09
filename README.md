@@ -22,3 +22,10 @@ $ brain-calc
 ```
 
 [![asciicast](https://asciinema.org/a/HlM1UN9shHwZCB4YoK26FHAfr.svg)](https://asciinema.org/a/HlM1UN9shHwZCB4YoK26FHAfr)
+
+### Start _brain progression_
+```sh
+$ brain-progression
+```
+
+[![asciicast](https://asciinema.org/a/ndYnNZ6C6Yf09Q4nCO3IFWEIa.svg)](https://asciinema.org/a/ndYnNZ6C6Yf09Q4nCO3IFWEIa)
