@@ -29,3 +29,10 @@ $ brain-progression
 ```
 
 [![asciicast](https://asciinema.org/a/ndYnNZ6C6Yf09Q4nCO3IFWEIa.svg)](https://asciinema.org/a/ndYnNZ6C6Yf09Q4nCO3IFWEIa)
+
+### Start _brain prime_
+```sh
+$ brain-prime
+```
+
+[![asciicast](https://asciinema.org/a/A38jW8qo1SYEYzNmTCYYw1Aeo.svg)](https://asciinema.org/a/A38jW8qo1SYEYzNmTCYYw1Aeo)
