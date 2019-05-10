@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
-// import { cons, car, cdr, toString } from 'hexlet-pairs';
 
 // Спрашиваем у пользователя имя, далее приветствуем его
 const greeting = () => {
@@ -9,14 +8,6 @@ const greeting = () => {
 };
 
 export default greeting;
-
-// const getName = () => {
-//   const name = readlineSync.question('May I have your name? ');
-//   console.log(`Hello, ${name}!`);
-//   console.log();
-
-//   return name;
-// };
 
 const core = (rules, askQuestion, getAnswer) => {
   const rounds = 3;
@@ -46,7 +37,7 @@ const core = (rules, askQuestion, getAnswer) => {
     // Задаем вопрос
     console.log(`Question: ${phrase}`);
 
-    // Получаем ответ обрабаотываем его
+    // Получаем ответ, обрабатываем его
     const answer = readlineSync.question('Your answer: ');
     const processedAnswer = getAnswer(answer);
 

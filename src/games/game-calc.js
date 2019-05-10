@@ -42,7 +42,7 @@ const calcAnswer = (string) => {
   // if (typeof Number(string) !== 'number') {
   //   return string;
   // }
-  if (isNaN(string)) {
+  if (Number.isNaN(string)) {
     return string;
   }
 
