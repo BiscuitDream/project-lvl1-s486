@@ -1,7 +1,13 @@
 {
   "name": "brain-games-s486",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Hexlet project lvl 1",
+  "keywords": [
+    "hexlet",
+    "brain games",
+    "hexlet project",
+    "game"
+  ],
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
