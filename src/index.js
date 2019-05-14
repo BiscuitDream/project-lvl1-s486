@@ -12,12 +12,12 @@ export default greeting;
 // Кол-во раундов игры
 const rounds = 3;
 
-const core = (rules, askQuestion, getAnswer) => {
+const core = (description, askQuestion, getAnswer) => {
   // Приветствие
   console.log('Welcome to the Brain Games!');
 
   // Вывод правил игры
-  console.log(rules);
+  console.log(description);
   console.log();
 
   // Получение имени и приветствие по имени
