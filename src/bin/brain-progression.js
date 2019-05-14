@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
 import { core } from '..';
-import { progressionRules, progressionQuestion, progressionAnswer } from '../games/progression';
+import { progressionDescription, progressionQuestion, progressionAnswer } from '../games/progression';
 
-core(progressionRules, progressionQuestion, progressionAnswer);
+core(progressionDescription, progressionQuestion, progressionAnswer);

@@ -1,10 +1,10 @@
 import { cons } from 'hexlet-pairs';
 import getRandomInt from '../utils';
 
-const primeRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const primeDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const primeQuestion = () => {
-  const number = getRandomInt(1, 100);
+  const question = getRandomInt(1, 100);
 
   const isPrime = (num) => {
     if (num <= 1) {
@@ -20,11 +20,11 @@ const primeQuestion = () => {
     return true;
   };
 
-  const coorectAnswer = isPrime(number) ? 'yes' : 'no';
+  const coorectAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return cons(number, coorectAnswer);
+  return cons(question, coorectAnswer);
 };
 
 const primeAnswer = string => string;
 
-export { primeRules, primeQuestion, primeAnswer };
+export { primeDescription, primeQuestion, primeAnswer };

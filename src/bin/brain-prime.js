@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
 import { core } from '..';
-import { primeRules, primeQuestion, primeAnswer } from '../games/prime';
+import { primeDescription, primeQuestion, primeAnswer } from '../games/prime';
 
-core(primeRules, primeQuestion, primeAnswer);
+core(primeDescription, primeQuestion, primeAnswer);

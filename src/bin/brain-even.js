@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
 import { core } from '..';
-import { evenRules, evenQuestion, evenAnswer } from '../games/even';
+import { evenDescription, evenQuestion, evenAnswer } from '../games/even';
 
-core(evenRules, evenQuestion, evenAnswer);
+core(evenDescription, evenQuestion, evenAnswer);

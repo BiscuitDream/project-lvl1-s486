@@ -1,7 +1,7 @@
 import { cons } from 'hexlet-pairs';
 import getRandomInt from '../utils';
 
-const calcRules = 'What is the result of the expression?';
+const calcDescription = 'What is the result of the expression?';
 
 const getRandomOperator = () => {
   const operator = getRandomInt(1, 3);
@@ -31,10 +31,10 @@ const calcQuestion = () => {
   const num2 = getRandomInt(0, 100);
   const operator = getRandomOperator();
 
-  const phrase = `${num1} ${operator} ${num2}`;
+  const question = `${num1} ${operator} ${num2}`;
   const correctAnswer = getResult(num1, num2, operator);
 
-  return cons(phrase, correctAnswer);
+  return cons(question, correctAnswer);
 };
 
 const calcAnswer = (string) => {
@@ -49,4 +49,4 @@ const calcAnswer = (string) => {
   return Number(string);
 };
 
-export { calcRules, calcQuestion, calcAnswer };
+export { calcDescription, calcQuestion, calcAnswer };

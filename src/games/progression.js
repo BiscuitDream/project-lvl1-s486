@@ -1,7 +1,7 @@
 import { cons } from 'hexlet-pairs';
 import getRandomInt from '../utils';
 
-const progressionRules = 'What number is missing in the progression?';
+const progressionDescription = 'What number is missing in the progression?';
 
 const progressionQuestion = () => {
   const progressionLength = 10;
@@ -37,4 +37,4 @@ const progressionQuestion = () => {
 // Улучшить, NaN
 const progressionAnswer = string => Number(string);
 
-export { progressionRules, progressionQuestion, progressionAnswer };
+export { progressionDescription, progressionQuestion, progressionAnswer };
