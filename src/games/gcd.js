@@ -19,7 +19,6 @@ const gcdQuestion = () => {
 
   const question = `${num1} ${num2}`;
   const correctAnswer = getGcd(num1, num2);
-  console.log('correctAnswer :', correctAnswer);
 
   return cons(question, correctAnswer);
 };
