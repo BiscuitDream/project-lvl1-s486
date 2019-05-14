@@ -9,8 +9,10 @@ const greeting = () => {
 
 export default greeting;
 
+// Кол-во раундов игры
+const rounds = 3;
+
 const core = (rules, askQuestion, getAnswer) => {
-  const rounds = 3;
   // Приветствие
   console.log('Welcome to the Brain Games!');
 
@@ -26,7 +28,8 @@ const core = (rules, askQuestion, getAnswer) => {
   // Начинаем раунды
   const round = (count) => {
     if (count >= rounds) {
-      return console.log(`Congratulations, ${name}!`);
+      console.log(`Congratulations, ${name}!`);
+      return;
     }
 
     // Получаем фразу для вопроса и правильный ответ (пара/hexlet-pairs)
@@ -45,13 +48,14 @@ const core = (rules, askQuestion, getAnswer) => {
       console.log('Correct!');
     } else {
       const message = `'${processedAnswer}' is wrong answer ;(. Correct answer was '${corectAnswer}'. \nLet's try again, Sam!`;
-      return console.log(message);
+      console.log(message);
+      return;
     }
 
     return round(count + 1);
   };
 
-  return round(0);
+  round(0);
 };
 
 export { core };
