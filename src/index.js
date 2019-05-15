@@ -1,14 +1,6 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
-// Спрашиваем у пользователя имя, далее приветствуем его
-const greeting = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-};
-
-export default greeting;
-
 // Кол-во раундов игры
 const rounds = 3;
 
@@ -58,4 +50,4 @@ const core = (description, askQuestion, getAnswer) => {
   round(0);
 };
 
-export { core };
+export default core;
