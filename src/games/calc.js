@@ -50,3 +50,6 @@ const calcAnswer = (string) => {
 };
 
 export { calcDescription, calcQuestion, calcAnswer };
+
+
+// объединить свичи

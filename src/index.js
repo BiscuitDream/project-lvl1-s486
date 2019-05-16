@@ -25,8 +25,8 @@ const core = (description, askQuestion, getAnswer) => {
     }
 
     // Получаем фразу для вопроса и правильный ответ (пара/hexlet-pairs)
-    const question = askQuestion(); // пара
-    const phrase = car(question); // фраза для вопроса
+    const question = askQuestion(); // пара // переименовать game data
+    const phrase = car(question); // фраза для вопроса   // переименовать question
     const corectAnswer = cdr(question); // верный ответ
 
     // Задаем вопрос
@@ -34,7 +34,7 @@ const core = (description, askQuestion, getAnswer) => {
 
     // Получаем ответ, обрабатываем его
     const answer = readlineSync.question('Your answer: ');
-    const processedAnswer = getAnswer(answer);
+    const processedAnswer = getAnswer(answer); // костыль
 
     if (processedAnswer === corectAnswer) {
       console.log('Correct!');
@@ -44,10 +44,13 @@ const core = (description, askQuestion, getAnswer) => {
       return;
     }
 
-    return round(count + 1);
+    return round(count + 1); // return тут не нужен. разобрать
   };
 
   round(0);
 };
 
 export default core;
+
+// лишняя функция-параметр для преобразования типа ответа
+// архитектура как в слаке

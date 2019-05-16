@@ -4,17 +4,17 @@ import getRandomInt from '../utils';
 const progressionDescription = 'What number is missing in the progression?';
 
 const progressionQuestion = () => {
-  const progressionLength = 10;
+  const progressionLength = 10; // можно на уровень модуля
   const progressionStart = getRandomInt(1, 100);
   const progressionStep = getRandomInt(1, 5);
-  const progressionSecretIndex = getRandomInt(0, 9);
+  const progressionSecretIndex = getRandomInt(0, 9); // hidden element index  (9 = length - 1)
 
   const getPhrase = (element, count, acc) => {
     if (count >= progressionLength) {
       return acc;
     }
     const newElement = (count === progressionSecretIndex) ? '..' : element + progressionStep;
-    const newAcc = `${acc} ${newElement}`;
+    const newAcc = `${acc} ${newElement}`; // лишний пробел будет в начале всегда
 
     return getPhrase(element + progressionStep, count + 1, newAcc);
   };
@@ -25,7 +25,7 @@ const progressionQuestion = () => {
     }
     const newCurrent = current + progressionStep;
 
-    return getCorrectAnswer(newCurrent, count + 1);
+    return getCorrectAnswer(newCurrent, count + 1); // посчитать через формулу, а не перебирать
   };
 
   const phrase = getPhrase(progressionStart, 0, '');
@@ -38,3 +38,5 @@ const progressionQuestion = () => {
 const progressionAnswer = string => Number(string);
 
 export { progressionDescription, progressionQuestion, progressionAnswer };
+
+// нет смысла добавлять прогрессион к каждой переменной. модуль и так относится в прогрессион
