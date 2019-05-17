@@ -19,14 +19,11 @@ const gcdQuestion = () => {
   // console.log('num2 :', num2);
 
   const question = `${num1} ${num2}`;
-  const correctAnswer = getGcd(num1, num2);
+  const correctAnswer = String(getGcd(num1, num2));
 
   return cons(question, correctAnswer);
 };
 
-// Заменить на аналог из game-calc.js
-const gcdAnswer = string => Number(string);
-
-const runGcd = () => core(gcdDescription, gcdQuestion, gcdAnswer);
+const runGcd = () => core(gcdDescription, gcdQuestion);
 
 export default runGcd;

@@ -33,24 +33,12 @@ const calcQuestion = () => {
   const operator = getRandomOperator();
 
   const question = `${num1} ${operator} ${num2}`;
-  const correctAnswer = getResult(num1, num2, operator);
+  const correctAnswer = String(getResult(num1, num2, operator));
 
   return cons(question, correctAnswer);
 };
 
-const calcAnswer = (string) => {
-  // Почему-то не работает так. Исправил пока что на isNan. Линтер ругается
-  // if (typeof Number(string) !== 'number') {
-  //   return string;
-  // }
-  if (Number.isNaN(string)) {
-    return string;
-  }
-
-  return Number(string);
-};
-
-const runCalc = () => core(calcDescription, calcQuestion, calcAnswer);
+const runCalc = () => core(calcDescription, calcQuestion);
 
 export default runCalc;
 

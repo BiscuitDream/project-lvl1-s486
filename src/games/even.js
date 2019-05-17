@@ -12,8 +12,6 @@ const evenQuestion = () => {
   return cons(question, correctAnswer);
 };
 
-const evenAnswer = string => string;
-
-const runEven = () => core(evenDescription, evenQuestion, evenAnswer);
+const runEven = () => core(evenDescription, evenQuestion);
 
 export default runEven;

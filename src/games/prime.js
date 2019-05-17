@@ -26,8 +26,6 @@ const primeQuestion = () => {
   return cons(question, coorectAnswer);
 };
 
-const primeAnswer = string => string;
-
-const runPrime = () => core(primeDescription, primeQuestion, primeAnswer);
+const runPrime = () => core(primeDescription, primeQuestion);
 
 export default runPrime;

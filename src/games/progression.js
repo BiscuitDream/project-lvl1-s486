@@ -30,15 +30,12 @@ const progressionQuestion = () => {
   };
 
   const phrase = getPhrase(progressionStart, 0, '');
-  const correctAnswer = getCorrectAnswer(progressionStart, 0);
+  const correctAnswer = String(getCorrectAnswer(progressionStart, 0));
 
   return cons(phrase, correctAnswer);
 };
 
-// Улучшить, NaN
-const progressionAnswer = string => Number(string);
-
-const runProgression = () => core(progressionDescription, progressionQuestion, progressionAnswer);
+const runProgression = () => core(progressionDescription, progressionQuestion);
 
 export default runProgression;
 

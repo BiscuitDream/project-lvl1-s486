@@ -4,7 +4,7 @@ import { car, cdr } from 'hexlet-pairs';
 // Кол-во раундов игры
 const rounds = 3;
 
-const core = (description, askQuestion, getAnswer) => {
+const core = (description, askQuestion) => {
   // Приветствие
   console.log('Welcome to the Brain Games!');
 
@@ -34,12 +34,11 @@ const core = (description, askQuestion, getAnswer) => {
 
     // Получаем ответ, обрабатываем его
     const answer = readlineSync.question('Your answer: ');
-    const processedAnswer = getAnswer(answer); // костыль
 
-    if (processedAnswer === corectAnswer) {
+    if (answer === corectAnswer) {
       console.log('Correct!');
     } else {
-      const message = `'${processedAnswer}' is wrong answer ;(. Correct answer was '${corectAnswer}'. \nLet's try again, Sam!`;
+      const message = `'${answer}' is wrong answer ;(. Correct answer was '${corectAnswer}'. \nLet's try again, Sam!`;
       console.log(message);
       return;
     }
@@ -51,6 +50,3 @@ const core = (description, askQuestion, getAnswer) => {
 };
 
 export default core;
-
-// лишняя функция-параметр для преобразования типа ответа
-// архитектура как в слаке
