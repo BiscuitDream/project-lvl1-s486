@@ -25,12 +25,12 @@ const core = (description, askQuestion, getAnswer) => {
     }
 
     // Получаем фразу для вопроса и правильный ответ (пара/hexlet-pairs)
-    const question = askQuestion(); // пара // переименовать game data
-    const phrase = car(question); // фраза для вопроса   // переименовать question
-    const corectAnswer = cdr(question); // верный ответ
+    const gameData = askQuestion(); // пара
+    const question = car(gameData); // фраза для вопроса
+    const corectAnswer = cdr(gameData); // верный ответ
 
     // Задаем вопрос
-    console.log(`Question: ${phrase}`);
+    console.log(`Question: ${question}`);
 
     // Получаем ответ, обрабатываем его
     const answer = readlineSync.question('Your answer: ');
@@ -44,7 +44,7 @@ const core = (description, askQuestion, getAnswer) => {
       return;
     }
 
-    return round(count + 1); // return тут не нужен. разобрать
+    round(count + 1);
   };
 
   round(0);
