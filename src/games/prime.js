@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import getRandomInt from '../utils';
+import core from '..';
 
 const primeDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -27,4 +28,6 @@ const primeQuestion = () => {
 
 const primeAnswer = string => string;
 
-export { primeDescription, primeQuestion, primeAnswer };
+const runPrime = () => core(primeDescription, primeQuestion, primeAnswer);
+
+export default runPrime;

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import core from '..';
-import { primeDescription, primeQuestion, primeAnswer } from '../games/prime';
+import runPrime from '../games/prime';
 
-core(primeDescription, primeQuestion, primeAnswer);
+runPrime();

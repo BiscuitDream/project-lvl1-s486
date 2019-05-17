@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import getRandomInt from '../utils';
+import core from '..';
 
 const evenDescription = 'Answer "yes" if number even otherwise answer "no".';
 
@@ -13,4 +14,6 @@ const evenQuestion = () => {
 
 const evenAnswer = string => string;
 
-export { evenDescription, evenQuestion, evenAnswer };
+const runEven = () => core(evenDescription, evenQuestion, evenAnswer);
+
+export default runEven;

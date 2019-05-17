@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import getRandomInt from '../utils';
+import core from '..';
 
 const getGcd = (n1, n2) => {
   if (n2 === 0) {
@@ -26,4 +27,6 @@ const gcdQuestion = () => {
 // Заменить на аналог из game-calc.js
 const gcdAnswer = string => Number(string);
 
-export { gcdDescription, gcdQuestion, gcdAnswer };
+const runGcd = () => core(gcdDescription, gcdQuestion, gcdAnswer);
+
+export default runGcd;

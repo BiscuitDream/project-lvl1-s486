@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import getRandomInt from '../utils';
+import core from '..';
 
 const calcDescription = 'What is the result of the expression?';
 
@@ -49,7 +50,9 @@ const calcAnswer = (string) => {
   return Number(string);
 };
 
-export { calcDescription, calcQuestion, calcAnswer };
+const runCalc = () => core(calcDescription, calcQuestion, calcAnswer);
+
+export default runCalc;
 
 
 // объединить свичи

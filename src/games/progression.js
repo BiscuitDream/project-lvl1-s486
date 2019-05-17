@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import getRandomInt from '../utils';
+import core from '..';
 
 const progressionDescription = 'What number is missing in the progression?';
 
@@ -37,6 +38,8 @@ const progressionQuestion = () => {
 // Улучшить, NaN
 const progressionAnswer = string => Number(string);
 
-export { progressionDescription, progressionQuestion, progressionAnswer };
+const runProgression = () => core(progressionDescription, progressionQuestion, progressionAnswer);
+
+export default runProgression;
 
 // нет смысла добавлять прогрессион к каждой переменной. модуль и так относится в прогрессион
