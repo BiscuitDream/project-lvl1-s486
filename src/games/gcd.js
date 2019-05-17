@@ -14,9 +14,7 @@ const gcdDescription = 'Find the greatest common divisor of given numbers.';
 
 const gcdQuestion = () => {
   const num1 = getRandomInt(1, 100);
-  // console.log('num1 :', num1);
   const num2 = getRandomInt(1, 100);
-  // console.log('num2 :', num2);
 
   const question = `${num1} ${num2}`;
   const correctAnswer = String(getGcd(num1, num2));
