@@ -18,7 +18,8 @@ const getResult = (a, b, operation) => {
 const calcQuestion = () => {
   const num1 = getRandomInt(0, 100);
   const num2 = getRandomInt(0, 100);
-  const operator = '+-*'[getRandomInt(0, 2)];
+  const operators = '+-*';
+  const operator = operators[getRandomInt(0, 2)];
 
   const question = `${num1} ${operator} ${num2}`;
   const correctAnswer = String(getResult(num1, num2, operator));
