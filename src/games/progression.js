@@ -13,18 +13,16 @@ const progressionQuestion = () => {
 
   const getQuestion = (element, count, acc) => {
     if (count >= length) {
-      return acc;
+      return acc.trim();
     }
-    const newElement = (count === hiddenElementIndex) ? '..' : element + step;
+    const newElement = (count === hiddenElementIndex) ? '..' : element;
     const newAcc = `${acc} ${newElement}`;
 
     return getQuestion(element + step, count + 1, newAcc);
   };
 
-  const getElementByIndex = () => start + (step * hiddenElementIndex);
-
-  const question = getQuestion(start - step, 0, '').trim();
-  const correctAnswer = String(getElementByIndex());
+  const question = getQuestion(start - step, 0, '');
+  const correctAnswer = String(start + (step * (hiddenElementIndex - 1)));
 
   return cons(question, correctAnswer);
 };
