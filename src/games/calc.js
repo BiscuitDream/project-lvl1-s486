@@ -15,11 +15,13 @@ const getResult = (a, b, operation) => {
   }
 };
 
+const operators = '+-*';
+const indexOfOperation = getRandomInt(0, operators.length - 1);
+
 const calcQuestion = () => {
   const num1 = getRandomInt(0, 100);
   const num2 = getRandomInt(0, 100);
-  const operators = '+-*';
-  const operator = operators[getRandomInt(0, 2)];
+  const operator = operators[indexOfOperation];
 
   const question = `${num1} ${operator} ${num2}`;
   const correctAnswer = String(getResult(num1, num2, operator));
