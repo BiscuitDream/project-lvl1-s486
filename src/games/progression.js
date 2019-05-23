@@ -26,16 +26,6 @@ const progressionQuestion = () => {
   const step = getRandomInt(1, 5);
   const hiddenElementIndex = getRandomInt(0, length - 1);
 
-  // const getQuestion = (element, count, acc) => {
-  //   if (count >= length) {
-  //     return acc.trim();
-  //   }
-  //   const newElement = (count === hiddenElementIndex) ? '..' : element;
-  //   const newAcc = `${acc} ${newElement}`;
-
-  //   return getQuestion(element + step, count + 1, newAcc);
-  // };
-
   const question = getProgression(start, step, length, hiddenElementIndex);
   const correctAnswer = String(start + (step * (hiddenElementIndex)));
 
