@@ -21,8 +21,8 @@ const progressionQuestion = () => {
     return getQuestion(element + step, count + 1, newAcc);
   };
 
-  const question = getQuestion(start - step, 0, '');
-  const correctAnswer = String(start + (step * (hiddenElementIndex - 1)));
+  const question = getQuestion(start, 0, '');
+  const correctAnswer = String(start + (step * (hiddenElementIndex)));
 
   return cons(question, correctAnswer);
 };
