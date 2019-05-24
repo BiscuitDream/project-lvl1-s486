@@ -16,11 +16,11 @@ const getResult = (a, b, operation) => {
 };
 
 const operators = '+-*';
-const indexOfOperation = getRandomInt(0, operators.length - 1);
 
 const calcQuestion = () => {
   const num1 = getRandomInt(0, 100);
   const num2 = getRandomInt(0, 100);
+  const indexOfOperation = getRandomInt(0, operators.length - 1);
   const operator = operators[indexOfOperation];
 
   const question = `${num1} ${operator} ${num2}`;
